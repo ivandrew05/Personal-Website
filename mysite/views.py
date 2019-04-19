@@ -4,22 +4,7 @@ import requests, json
 
 
 def index(request):
-    if request.method == 'POST':
-        firstname = request.POST.get('fname')
-        lastname = request.POST.get('lname')
-        r = requests.get('http://api.icndb.com/jokes/random?firstName=' + firstname + ' & lastName=' + lastname)
-        json_data = json.loads(r.text)
-        joke = json_data.get('value').get('joke')
-        context = {'joker': joke}
-        return render(request, 'mysite/index.html', context)
-    else:
-        firstname = 'Ivan'
-        lastname = 'Drew'
-        r = requests.get('http://api.icndb.com/jokes/random?firstName=' + firstname + ' & lastName=' + lastname)
-        json_data = json.loads(r.text)
-        joke = json_data.get('value').get('joke')
-        context = {'joker': joke}
-        return render(request, 'mysite/index.html', context)
+    return render(request, 'mysite/index.html')
 
 
 def portfolio(request):
@@ -37,3 +22,12 @@ def contact(request):
         return render(request, 'mysite/thank.html')
     else:
         return render(request, 'mysite/contact.html')
+
+
+def carousel1(request):
+    return render(request, 'mysite/carousel1.html')
+
+
+def carousel2(request):
+    return render(request, 'mysite/carousel2.html')
+    
