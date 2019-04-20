@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Contact
-import requests, json
+import requests
+import json
 
 
 def index(request):
@@ -17,7 +18,8 @@ def contact(request):
         subject_received = request.POST.get('subject')
         message_received = request.POST.get('message')
 
-        c = Contact(email=email_received, subject=subject_received, message=message_received)
+        c = Contact(email=email_received, subject=subject_received,
+                    message=message_received)
         c.save()
         return render(request, 'mysite/thank.html')
     else:
@@ -30,4 +32,15 @@ def carousel1(request):
 
 def carousel2(request):
     return render(request, 'mysite/carousel2.html')
-    
+
+
+def video1(request):
+    return render(request, 'mysite/video1.html')
+
+
+def video2(request):
+    return render(request, 'mysite/video2.html')
+
+
+def video6(request):
+    return render(request, 'mysite/video6.html')

@@ -25,12 +25,14 @@
 
             <div class="col">
                 <div class="card">
-                    <img class="card-img-top" src="{% static 'mysite/images/004.jpg' %}" alt="Card image cap">
+                    <a href="{% url 'carousel1' %}">
+                        <img class="card-img-top" src="{% static 'mysite/images/004.jpg' %}" alt="Card image cap">
+                    </a>
                     <div class="card-body">
                         <h5 class="card-title">你的字写得真好看</h5>
                         <p class="card-text">"肖途，你的字写得真好看，你看，我学得像不像。" "你写得比我好看，字如其人。" "呆子。"
                         </p>
-                        <a href="{% url 'carousel1' %}" class="btn btn-secondary btn-sm">更多图片</a>
+                        <a href="{% url 'video1' %}" class="btn btn-secondary btn-sm">观看视频</a>
                     </div>
                 </div>
             </div>
@@ -40,12 +42,9 @@
                     <img class="card-img-top" src="{% static 'mysite/images/007.jpg' %}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">连我都不能说吗</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                            content.
+                        <p class="card-text">"到底发生了什么，连我都不能说吗？" "事情都已经过去了，问那么多干嘛。" "你变了。"
                         </p>
-                        <p class="card-text">
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                        </p>
+                        <a href="{% url 'video2' %}" class="btn btn-secondary btn-sm">观看视频</a>
                     </div>
                 </div>
             </div>
@@ -58,11 +57,10 @@
                         <p class="card-text">"都说得罪谁也不要得罪女人，看来这话说的没错啊，真不愧是我们保密局心狠毒辣的第一女魔头。"
                         </p>
                         <a href="{% url 'carousel2' %}" class="btn btn-secondary btn-sm">更多图片</a>
-                        <p class="card-text">
-                        </p>
                     </div>
                 </div>
             </div>
+
         </div>
 
         <div class="row" style="margin-top: 20px">
@@ -104,9 +102,7 @@
                         <p class="card-text">
                             子弹如雨点般密集，却没有雨点的温柔，有人在哭喊着什么，但我已经听不见了，突然间，枪雨消失了，取而代之的是数滴温暖的雨点，所以我脑海中涌出了最后一个问题，这雨点，是她的鲜血，还是她的眼泪？
                         </p>
-                        <p class="card-text">
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                        </p>
+                        <a href="{% url 'video6' %}" class="btn btn-secondary btn-sm">观看视频</a>
                     </div>
                 </div>
             </div>
