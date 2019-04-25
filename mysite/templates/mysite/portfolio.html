@@ -51,12 +51,14 @@
 
             <div class="col">
                 <div class="card">
-                    <img class="card-img-top" src="{% static 'mysite/images/008.jpg' %}" alt="Card image cap">
+                    <a href="{% url 'album2' %}">
+                        <img class="card-img-top" src="{% static 'mysite/images/008.jpg' %}" alt="Card image cap">
+                    </a>
                     <div class="card-body">
                         <h5 class="card-title">军统第一女魔头</h5>
                         <p class="card-text">"都说得罪谁也不要得罪女人，看来这话说的没错啊，真不愧是我们保密局心狠毒辣的第一女魔头。"
                         </p>
-                        <a href="{% url 'carousel2' %}" class="btn btn-secondary btn-sm">更多图片</a>
+                        <a href="{% url 'video3' %}" class="btn btn-secondary btn-sm">观看视频</a>
                     </div>
                 </div>
             </div>

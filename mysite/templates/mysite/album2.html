@@ -4,55 +4,95 @@
 {% block content %}
 
 <style>
+    * {
+        box-sizing: border-box;
+    }
 
+    h5 {
+        font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif
+    }
+
+    p {
+        font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif
+    }
+
+    a {
+        font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 0;
+    }
+
+    /* Create four equal columns that sits next to each other */
+    .column {
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+    }
+
+    .column img {
+        margin-bottom: 8px;
+        vertical-align: middle;
+        border-radius: 8px;
+    }
+
+    /* Responsive layout - makes a three column-layout instead of four columns */
+    @media (max-width: 1000px) {
+        .column {
+            flex: 33.3%;
+            max-width: 33.3%;
+        }
+    }
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media (max-width: 800px) {
+        .column {
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media (max-width: 600px) {
+        .column {
+            flex: 100%;
+            max-width: 100%;
+        }
+    }
 </style>
 
 <div class="container" style="margin-top: 50px; margin-bottom: 40px">
+    <div class="row">
 
-    <div class="row" style="margin-bottom: 20px">
-
-        <div class="col">
-            <img src="{% static 'mysite/images/parallel/001.jpg' %}" width="100%" alt="image">
+        <div class="column">
+            <a href="{% static 'mysite/images/parallel/001.jpg' %}">
+                <img src="{% static 'mysite/images/parallel/001.jpg' %}" alt="Cinque Terre" style="width:100%">
+            </a>
+            <img src="{% static 'mysite/images/parallel/005.jpg' %}" alt="Cinque Terre" style="width:100%">
         </div>
 
-        <div class="col">
-            <img src="{% static 'mysite/images/parallel/002.jpg' %}" width="100%" alt="image">
+        <div class="column">
+            <a href="{% static 'mysite/images/parallel/002.jpg' %}">
+                <img src="{% static 'mysite/images/parallel/002.jpg' %}" alt="Cinque Terre" style="width:100%">
+            </a>
+            <img src="{% static 'mysite/images/parallel/006.jpg' %}" style="width:100%">
         </div>
 
-        <div class="col">
-            <img src="{% static 'mysite/images/parallel/003.jpg' %}" width="100%" alt="image">
+        <div class="column">
+            <a href="{% static 'mysite/images/parallel/003.jpg' %}">
+                <img src="{% static 'mysite/images/parallel/003.jpg' %}" alt="Cinque Terre" style="width:100%">
+            </a>
+            <img src="{% static 'mysite/images/parallel/007.jpg' %}" style="width:100%">
         </div>
 
-    </div>
-
-    <div class="row" style="margin-bottom: 20px">
-
-        <div class="col">
-            <img src="{% static 'mysite/images/parallel/004.jpg' %}" width="100%" alt="image">
-        </div>
-
-        <div class="col">
-            <img src="{% static 'mysite/images/parallel/005.jpg' %}" width="100%" alt="image">
-        </div>
-
-        <div class="col">
-            <img src="{% static 'mysite/images/parallel/006.jpg' %}" width="100%" alt="image">
-        </div>
-
-    </div>
-
-    <div class="row" style="margin-bottom: 20px">
-
-        <div class="col">
-            <img src="{% static 'mysite/images/parallel/007.jpg' %}" width="100%" alt="image">
-        </div>
-
-        <div class="col">
-            <img src="{% static 'mysite/images/parallel/008.jpg' %}" width="100%" alt="image">
-        </div>
-
-        <div class="col">
-            <img src="{% static 'mysite/images/parallel/009.jpg' %}" width="100%" alt="image">
+        <div class="column">
+            <a href="{% static 'mysite/images/parallel/004.jpg' %}">
+                <img src="{% static 'mysite/images/parallel/004.jpg' %}" alt="Cinque Terre" style="width:100%">
+            </a>
+            <img src="{% static 'mysite/images/parallel/008.jpg' %}" style="width:100%">
         </div>
 
     </div>
