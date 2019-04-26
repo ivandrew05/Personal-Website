@@ -20,6 +20,60 @@
         font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif
     }
 
+    img:hover {
+        /* Start the shake animation and make the animation last for 0.5 seconds */
+        animation: shake 0.5s;
+
+        /* When the animation is finished, start again */
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes shake {
+        0% {
+            transform: translate(1px, 1px) rotate(0deg);
+        }
+
+        10% {
+            transform: translate(-1px, -2px) rotate(-1deg);
+        }
+
+        20% {
+            transform: translate(-3px, 0px) rotate(1deg);
+        }
+
+        30% {
+            transform: translate(3px, 2px) rotate(0deg);
+        }
+
+        40% {
+            transform: translate(1px, -1px) rotate(1deg);
+        }
+
+        50% {
+            transform: translate(-1px, 2px) rotate(-1deg);
+        }
+
+        60% {
+            transform: translate(-3px, 1px) rotate(0deg);
+        }
+
+        70% {
+            transform: translate(3px, 1px) rotate(-1deg);
+        }
+
+        80% {
+            transform: translate(-1px, -1px) rotate(1deg);
+        }
+
+        90% {
+            transform: translate(1px, 2px) rotate(0deg);
+        }
+
+        100% {
+            transform: translate(1px, -2px) rotate(-1deg);
+        }
+    }
+
     .row {
         display: flex;
         flex-wrap: wrap;
@@ -69,30 +123,38 @@
 
         <div class="column">
             <a href="{% static 'mysite/images/parallel/001.jpg' %}">
-                <img src="{% static 'mysite/images/parallel/001.jpg' %}" alt="Cinque Terre" style="width:100%">
+                <img src="{% static 'mysite/images/parallel/001.jpg' %}" alt="001" style="width:100%">
             </a>
-            <img src="{% static 'mysite/images/parallel/005.jpg' %}" alt="Cinque Terre" style="width:100%">
-        </div>
-
-        <div class="column">
             <a href="{% static 'mysite/images/parallel/002.jpg' %}">
-                <img src="{% static 'mysite/images/parallel/002.jpg' %}" alt="Cinque Terre" style="width:100%">
+                <img src="{% static 'mysite/images/parallel/002.jpg' %}" alt="002" style="width:100%">
             </a>
-            <img src="{% static 'mysite/images/parallel/006.jpg' %}" style="width:100%">
         </div>
 
         <div class="column">
             <a href="{% static 'mysite/images/parallel/003.jpg' %}">
-                <img src="{% static 'mysite/images/parallel/003.jpg' %}" alt="Cinque Terre" style="width:100%">
+                <img src="{% static 'mysite/images/parallel/003.jpg' %}" alt="003" style="width:100%">
             </a>
-            <img src="{% static 'mysite/images/parallel/007.jpg' %}" style="width:100%">
+            <a href="{% static 'mysite/images/parallel/004.jpg' %}">
+                <img src="{% static 'mysite/images/parallel/004.jpg' %}" alt="004" style="width:100%">
+            </a>
         </div>
 
         <div class="column">
-            <a href="{% static 'mysite/images/parallel/004.jpg' %}">
-                <img src="{% static 'mysite/images/parallel/004.jpg' %}" alt="Cinque Terre" style="width:100%">
+            <a href="{% static 'mysite/images/parallel/005.jpg' %}">
+                <img src="{% static 'mysite/images/parallel/005.jpg' %}" alt="005" style="width:100%">
             </a>
-            <img src="{% static 'mysite/images/parallel/008.jpg' %}" style="width:100%">
+            <a href="{% static 'mysite/images/parallel/006.jpg' %}">
+                <img src="{% static 'mysite/images/parallel/006.jpg' %}" alt="006" style="width:100%">
+            </a>
+        </div>
+
+        <div class="column">
+            <a href="{% static 'mysite/images/parallel/007.jpg' %}">
+                <img src="{% static 'mysite/images/parallel/007.jpg' %}" alt="007" style="width:100%">
+            </a>
+            <a href="{% static 'mysite/images/parallel/008.jpg' %}">
+                <img src="{% static 'mysite/images/parallel/008.jpg' %}" alt="008" style="width:100%">
+            </a>
         </div>
 
     </div>
