@@ -8,8 +8,8 @@ def index(request):
     return render(request, 'mysite/index.html')
 
 
-def portfolio(request):
-    return render(request, 'mysite/portfolio.html')
+def parallel(request):
+    return render(request, 'mysite/parallel.html')
 
 
 def contact(request):
@@ -58,5 +58,5 @@ def video6(request):
     return render(request, 'mysite/video6.html')
 
 
-def album2(request):
-    return render(request, 'mysite/album2.html')
+def album3(request):
+    return render(request, 'mysite/album3.html')
