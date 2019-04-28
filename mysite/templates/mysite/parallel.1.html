@@ -4,49 +4,6 @@
 {% block content %}
 
 <style>
-    .no-gutter-card-deck.card-columns {
-        column-gap: 8px;
-    }
-
-    .no-gutter-card-deck>.card {
-        margin-bottom: 8px;
-    }
-
-    .card {
-        border: none;
-    }
-
-    .card img {
-        border: none;
-        border-radius: 8px;
-    }
-
-    @media (min-width: 600px) {
-        .card-columns {
-            -webkit-column-count: 2;
-            -moz-column-count: 2;
-            column-count: 2;
-        }
-    }
-
-    @media (min-width: 800px) {
-        .card-columns {
-            -webkit-column-count: 3;
-            -moz-column-count: 3;
-            column-count: 3;
-        }
-    }
-
-    @media (min-width: 1000px) {
-        .card-columns {
-            -webkit-column-count: 4;
-            -moz-column-count: 4;
-            column-count: 4;
-        }
-    }
-
-
-
     img:hover {
         /* Start the shake animation and make the animation last for 0.5 seconds */
         animation: shake 0.5s;
@@ -100,62 +57,93 @@
             transform: translate(1px, -2px) rotate(-1deg);
         }
     }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    /* Create four equal columns that sits next to each other */
+    .column {
+        flex: 25%;
+        max-width: 25%;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .column img {
+        vertical-align: middle;
+        border-radius: 8px;
+        margin-bottom: 8px;
+    }
+
+    /* Responsive layout - makes a three column-layout instead of four columns */
+    @media (max-width: 1200px) {
+        .column {
+            flex: 33.3%;
+            max-width: 33.3%;
+        }
+    }
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media (max-width: 1000px) {
+        .column {
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media (max-width: 800px) {
+        .column {
+            flex: 100%;
+            max-width: 100%;
+        }
+    }
 </style>
 
 <div class="container" style="margin-top: 50px; margin-bottom: 40px">
+    <div class="row">
 
-    <div class="card-columns no-gutter-card-deck">
-
-        <div class="card">
+        <div class="column" style="padding:0 6px 0 0">
             <a href="{% static 'mysite/images/parallel/001.jpg' %}">
                 <img src="{% static 'mysite/images/parallel/001.jpg' %}" alt="001" style="width:100%">
             </a>
-        </div>
-
-        <div class="card">
             <a href="{% static 'mysite/images/parallel/002.jpg' %}">
                 <img src="{% static 'mysite/images/parallel/002.jpg' %}" alt="002" style="width:100%">
             </a>
         </div>
 
-        <div class="card">
+        <div class="column" style="padding:0 4px 0 2px">
             <a href="{% static 'mysite/images/parallel/003.jpg' %}">
                 <img src="{% static 'mysite/images/parallel/003.jpg' %}" alt="003" style="width:100%">
             </a>
-        </div>
-
-        <div class="card">
             <a href="{% static 'mysite/images/parallel/004.jpg' %}">
                 <img src="{% static 'mysite/images/parallel/004.jpg' %}" alt="004" style="width:100%">
             </a>
         </div>
 
-        <div class="card">
+        <div class="column" style="padding:0 2px 0 4px">
             <a href="{% static 'mysite/images/parallel/005.jpg' %}">
                 <img src="{% static 'mysite/images/parallel/005.jpg' %}" alt="005" style="width:100%">
             </a>
-        </div>
-
-        <div class="card">
             <a href="{% static 'mysite/images/parallel/006.jpg' %}">
                 <img src="{% static 'mysite/images/parallel/006.jpg' %}" alt="006" style="width:100%">
             </a>
         </div>
 
-        <div class="card">
+        <div class="column" style="padding: 0 0 0 6px">
             <a href="{% static 'mysite/images/parallel/007.jpg' %}">
                 <img src="{% static 'mysite/images/parallel/007.jpg' %}" alt="007" style="width:100%">
             </a>
-        </div>
-
-        <div class="card">
             <a href="{% static 'mysite/images/parallel/008.jpg' %}">
                 <img src="{% static 'mysite/images/parallel/008.jpg' %}" alt="008" style="width:100%">
             </a>
         </div>
 
     </div>
-
 </div>
 
 {% endblock %}
