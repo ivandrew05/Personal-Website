@@ -19,22 +19,22 @@
     .row {
         display: flex;
         flex-wrap: wrap;
-        padding: 0px 0px;
+        padding: 0px;
         margin: 0px;
     }
 
     /* Create four equal columns that sits next to each other */
     .column {
-        flex: 33.3%;
-        max-width: 33.3%;
-        padding-right: 8px;
+        flex: 33.33%;
+        max-width: 33.33%;
+        padding: 0px;
         margin: 0px;
     }
 
     .column img {
         vertical-align: middle;
         border-radius: 8px;
-        margin-bottom: 8px;
+        margin-bottom: 9px;
     }
 
     /* Responsive layout - makes a two column-layout instead of four columns */
@@ -57,7 +57,7 @@
 <div class="container" style="margin-top: 50px; margin-bottom: 40px">
     <div class="row">
 
-        <div class="column">
+        <div class="column" style="padding:0 6px 0 0">
             <a href="{% static 'mysite/images/012.jpg' %}">
                 <img src="{% static 'mysite/images/012.jpg' %}" alt="012" style="width:100%">
             </a>
@@ -74,7 +74,7 @@
 
         </div>
 
-        <div class="column">
+        <div class="column" style="padding:0 3px">
             <a href="{% static 'mysite/images/016.jpg' %}">
                 <img src="{% static 'mysite/images/016.jpg' %}" alt="016" style="width:100%">
             </a>
@@ -89,7 +89,7 @@
             </a>
         </div>
 
-        <div class="column" style="padding-right:0px">
+        <div class="column" style="padding:0 0 0 6px">
             <a href="{% static 'mysite/images/020.jpg' %}">
                 <img src="{% static 'mysite/images/020.jpg' %}" alt="020" style="width:100%">
             </a>
