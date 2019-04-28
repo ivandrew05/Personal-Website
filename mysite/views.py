@@ -58,5 +58,13 @@ def video6(request):
     return render(request, 'mysite/video6.html')
 
 
+def album2(request):
+    return render(request, 'mysite/album2.html')
+
+
 def album3(request):
     return render(request, 'mysite/album3.html')
+
+
+def album4(request):
+    return render(request, 'mysite/album4.html')
