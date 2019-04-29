@@ -26,12 +26,12 @@ def contact(request):
         return render(request, 'mysite/contact.html')
 
 
+def ending(request):
+    return render(request, 'mysite/ending.html')
+
+
 def carousel1(request):
     return render(request, 'mysite/carousel1.html')
-
-
-def carousel2(request):
-    return render(request, 'mysite/carousel2.html')
 
 
 def video1(request):
