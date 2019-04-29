@@ -5,7 +5,7 @@ from . import views
 urlpatterns = [
     path('', views.index, name='home'),
     path('parallel', views.parallel, name='parallel'),
-    path('ending', views.ending, name='ending'),
+    path('fanfiction', views.fanfiction, name='fanfiction'),
     path('contact', views.contact, name='contact'),
     path('carousel1', views.carousel1, name='carousel1'),
     path('video1', views.video1, name='video1'),

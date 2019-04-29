@@ -26,8 +26,8 @@ def contact(request):
         return render(request, 'mysite/contact.html')
 
 
-def ending(request):
-    return render(request, 'mysite/ending.html')
+def fanfiction(request):
+    return render(request, 'mysite/fanfiction.html')
 
 
 def carousel1(request):
