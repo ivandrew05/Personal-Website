@@ -1,0 +1,104 @@
+{% extends 'mysite/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    .no-gutter-card-deck.card-columns {
+        column-gap: 8px;
+    }
+
+    .no-gutter-card-deck>.card {
+        margin: 0 0 8px 0;
+    }
+
+    .card {
+        border: none;
+    }
+
+    .card img {
+        border: none;
+        border-radius: 8px;
+    }
+
+    @media (min-width: 600px) {
+        .card-columns {
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+        }
+    }
+
+    img:hover {
+        opacity: 1;
+        -webkit-animation: flash 1.0s;
+        animation: flash 1.0s;
+    }
+
+    @-webkit-keyframes flash {
+        0% {
+            opacity: .4;
+        }
+
+        100% {
+            opacity: 1;
+
+        }
+    }
+
+    @keyframes flash {
+        0% {
+            opacity: .4;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+</style>
+
+<div class="container" style="margin-top: 50px; margin-bottom: 40px">
+
+    <div class="card-columns no-gutter-card-deck">
+
+        <div class="card">
+            <a href="{% static 'mysite/images/003.jpg' %}">
+                <img src="{% static 'mysite/images/003.jpg' %}" alt="003" style="width:100%">
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="{% static 'mysite/images/004.jpg' %}">
+                <img src="{% static 'mysite/images/004.jpg' %}" alt="004" style="width:100%">
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="{% static 'mysite/images/005.jpg' %}">
+                <img src="{% static 'mysite/images/005.jpg' %}" alt="005" style="width:100%">
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="{% static 'mysite/images/006.jpg' %}">
+                <img src="{% static 'mysite/images/006.jpg' %}" alt="006" style="width:100%">
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="{% static 'mysite/images/001.jpg' %}">
+                <img src="{% static 'mysite/images/001.jpg' %}" alt="001" style="width:100%">
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="{% static 'mysite/images/002.jpg' %}">
+                <img src="{% static 'mysite/images/002.jpg' %}" alt="002" style="width:100%">
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

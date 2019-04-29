@@ -58,6 +58,10 @@ def video6(request):
     return render(request, 'mysite/video6.html')
 
 
+def album1(request):
+    return render(request, 'mysite/album1.html')
+
+
 def album2(request):
     return render(request, 'mysite/album2.html')
 
@@ -68,3 +72,7 @@ def album3(request):
 
 def album4(request):
     return render(request, 'mysite/album4.html')
+
+
+def album5(request):
+    return render(request, 'mysite/album5.html')

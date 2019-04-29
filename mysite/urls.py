@@ -14,7 +14,9 @@ urlpatterns = [
     path('video4', views.video4, name='video4'),
     path('video5', views.video5, name='video5'),
     path('video6', views.video6, name='video6'),
+    path('album1', views.album1, name='album1'),
     path('album2', views.album2, name='album2'),
     path('album3', views.album3, name='album3'),
     path('album4', views.album4, name='album4'),
+    path('album5', views.album5, name='album5'),
 ]
