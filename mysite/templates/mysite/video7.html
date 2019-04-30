@@ -1,0 +1,18 @@
+{% extends 'mysite/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    video {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+
+<div class="container" style="margin-top: 50px; margin-bottom: 40px">
+    <video src="{% static 'mysite/videos/007.mp4' %}" controls autoplay controlsList="nodownload">
+    </video>
+</div>
+
+{% endblock %}
