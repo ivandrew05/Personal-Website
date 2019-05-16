@@ -1,6 +1,10 @@
 {% extends 'mysite/base.html' %}
 {% load static %}
 
+{% block nav_fanfiction %}
+<a class="nav-item nav-link active" style="font-size: 17px" href="{% url 'fanfiction' %}">同人文</a>
+{% endblock %}
+
 {% block content %}
 
 <style>

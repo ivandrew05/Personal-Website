@@ -1,5 +1,9 @@
 {% extends 'mysite/base.html' %}
 
+{% block nav_contact %}
+<a class="nav-item nav-link active" style="font-size: 17px" href="{% url 'contact' %}">留言</a>
+{% endblock %}
+
 {% block content %}
 
 <div class="container">

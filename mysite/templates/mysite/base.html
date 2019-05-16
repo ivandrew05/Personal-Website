@@ -42,12 +42,21 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
                 <div class="navbar-nav mx-auto">
-                    <a class="nav-item nav-link active" style="font-size: 17px" href="{% url 'home' %}">首页<span
-                            class="sr-only">(current)</span></a>
+                    {% block nav_home %}
+                    <a class="nav-item nav-link" style="font-size: 17px" href="{% url 'home' %}">首页</a>
+                    {% endblock %}
+                    {% block nav_parallel %}
                     <a class="nav-item nav-link" style="font-size: 17px" href="{% url 'parallel' %}">平行世界</a>
+                    {% endblock %}
+                    {% block nav_fanfiction %}
                     <a class="nav-item nav-link" style="font-size: 17px" href="{% url 'fanfiction' %}">同人文</a>
+                    {% endblock %}
+                    {% block nav_video7 %}
                     <a class="nav-item nav-link" style="font-size: 17px" href="{% url 'video7' %}">大结局MV</a>
+                    {% endblock %}
+                    {% block nav_contact %}
                     <a class="nav-item nav-link" style="font-size: 17px" href="{% url 'contact' %}">留言</a>
+                    {% endblock %}
                 </div>
 
                 <div class="navbar-nav">

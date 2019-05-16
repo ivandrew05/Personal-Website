@@ -1,6 +1,10 @@
 {% extends 'mysite/base.html' %}
 {% load static %}
 
+{% block nav_home %}
+<a class="nav-item nav-link active" style="font-size: 17px" href="{% url 'home' %}">首页</a>
+{% endblock %}
+
 {% block content %}
 
 <style>
